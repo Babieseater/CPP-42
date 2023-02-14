@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:10:59 by smayrand          #+#    #+#             */
-/*   Updated: 2023/01/23 13:47:51 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/01/24 13:49:48 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,7 @@ private:
 	std::string getnickname(int size) const;
 	std::string getnumber(int size) const;
 	std::string getsecret(int size) const;
-	//setters
-	//void	setfirstname(void);
-	//void	setlastname(void);
-	//void	setnickname(void);
-	//void	setnumber(void);
-	//void	setsecret(void);	
+
 public:
 	Contact();
 	~Contact();

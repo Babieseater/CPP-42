@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 16:26:18 by smayrand          #+#    #+#             */
-/*   Updated: 2023/01/31 18:49:55 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/02/02 10:23:26 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	Harl::complain(std::string level) {
 	int i = 0;
 	while(i < 4)
 	{
+		
 		if (_level[i] == level)
 		{
 			(this->*_actions[i])();
