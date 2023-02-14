@@ -6,24 +6,25 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:04:15 by smayrand          #+#    #+#             */
-/*   Updated: 2023/02/14 14:23:03 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:53:47 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 //Constructor
-FragTrap::FragTrap(std::string name) {
+FragTrap::FragTrap(std::string name) : ClapTrap() {
 	Name = name;
 	Hitpoints = 100;
 	Energy = 100;
 	AtkDmg = 30;
 	std::cout << "FragTrap " << Name << " has been powered up!" << std::endl;
+	return;
 }
 //Destructor
 FragTrap::~FragTrap() {
 	std::cout << "FragTrap " << Name << " has been sent to heaven!" << std::endl;
-
+	return;
 }
 
 //functions

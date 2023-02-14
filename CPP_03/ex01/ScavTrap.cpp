@@ -6,24 +6,26 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:04:15 by smayrand          #+#    #+#             */
-/*   Updated: 2023/02/14 13:58:30 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:56:05 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 //Constructor
-ScavTrap::ScavTrap(std::string name) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap() {
 	Name = name;
 	Hitpoints = 100;
 	Energy = 50;
 	AtkDmg = 20;
 	std::cout << "ScavTrap " << Name << " has been built!" << std::endl;
+	return;
 }
 //Destructor
 ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap " << Name << " has been shredded to pieces!" << std::endl;
-
+	return;
 }
 
 //functions

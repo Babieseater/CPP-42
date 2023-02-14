@@ -6,13 +6,16 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 13:07:53 by smayrand          #+#    #+#             */
-/*   Updated: 2023/02/14 13:28:33 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:49:33 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 //Constructor
+ClapTrap::ClapTrap() {
+	
+}
 ClapTrap::ClapTrap(std::string name) {
 	Name = name;
 	Hitpoints = 10;
