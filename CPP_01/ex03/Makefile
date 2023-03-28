@@ -6,7 +6,7 @@
 #    By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/30 11:17:15 by smayrand          #+#    #+#              #
-#    Updated: 2023/01/30 12:52:06 by smayrand         ###   ########.fr        #
+#    Updated: 2023/03/22 03:28:14 by smayrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ NONE = '\033[0m'
 NAME = Violence
 
 CC = clang++
-CFLAGS = -Wall -Werror -Wextra -pthread -std=c++98
-AR = ar -rcs
+CFLAGS = -Wall -Werror -Wextra  -std=c++98
+
 
 RM = rm -f
 

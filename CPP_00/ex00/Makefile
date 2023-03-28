@@ -6,7 +6,7 @@
 #    By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/20 13:41:36 by smayrand          #+#    #+#              #
-#    Updated: 2022/12/20 14:25:46 by smayrand         ###   ########.fr        #
+#    Updated: 2023/03/22 03:28:14 by smayrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ NONE = '\033[0m'
 NAME = megaphone
 
 CC = clang++
-CFLAGS = -Wall -Werror -Wextra -pthread -std=c++98
-AR = ar -rcs
+CFLAGS = -Wall -Werror -Wextra  -std=c++98
+
 
 RM = rm -f
 

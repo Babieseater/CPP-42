@@ -6,7 +6,7 @@
 #    By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/02 11:25:05 by smayrand          #+#    #+#              #
-#    Updated: 2023/02/07 15:30:29 by smayrand         ###   ########.fr        #
+#    Updated: 2023/03/22 03:28:14 by smayrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ NONE = '\033[0m'
 NAME = FixMe
 
 CC = clang++
-CFLAGS = -Wall -Werror -Wextra -pthread -std=c++98
-AR = ar -rcs
+CFLAGS = -Wall -Werror -Wextra  -std=c++98
+
 
 RM = rm -f
 

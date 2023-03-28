@@ -14,7 +14,7 @@
 GREEN = '\033[32m'
 NONE = '\033[0m'
 
-NAME = FragTrap
+NAME = Polymorph
 
 CC = clang++
 CFLAGS = -Wall -Werror -Wextra  -std=c++98
@@ -23,10 +23,11 @@ CFLAGS = -Wall -Werror -Wextra  -std=c++98
 RM = rm -f
 
 SRCS = main.cpp\
-ClapTrap.cpp\
-ScavTrap.cpp\
-FragTrap.cpp
-
+Animal.cpp\
+Cat.cpp\
+Dog.cpp\
+WrongAnimal.cpp\
+WrongCat.cpp
 
 
 

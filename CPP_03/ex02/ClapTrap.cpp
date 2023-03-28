@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 13:07:53 by smayrand          #+#    #+#             */
-/*   Updated: 2023/02/14 14:49:33 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/02/16 14:55:01 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 //Constructor
 ClapTrap::ClapTrap() {
-	
+	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 ClapTrap::ClapTrap(std::string name) {
 	Name = name;
