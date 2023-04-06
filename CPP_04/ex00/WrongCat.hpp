@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 14:08:27 by smayrand          #+#    #+#             */
-/*   Updated: 2023/03/28 13:07:56 by smayrand         ###   ########.fr       */
+/*   Created: 2023/03/13 14:08:52 by smayrand          #+#    #+#             */
+/*   Updated: 2023/03/29 15:31:30 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-#define CAT_H
+#ifndef WRONGCAT_H
+#define WRONGCAT_H
 #include <iostream>
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Cat : public Animal {
-	public:
-	//constructor
-		Cat();
-	//destructor
-		~Cat();
-	//function
-	void makesound();
-	
-	private:
+class WrongCat : public WrongAnimal {
+public:
+//constructor
+WrongCat();
+WrongCat(WrongCat &copy);
+//destructor
+~WrongCat();
+
+private:
 
 };
 

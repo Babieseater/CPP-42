@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 14:08:52 by smayrand          #+#    #+#             */
-/*   Updated: 2023/03/13 14:46:38 by smayrand         ###   ########.fr       */
+/*   Created: 2023/03/13 14:08:40 by smayrand          #+#    #+#             */
+/*   Updated: 2023/03/29 15:30:54 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_H
-#define WRONGCAT_H
-#include <iostream>
-#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
-class WrongCat : public WrongAnimal {
-public:
 //constructor
-WrongCat();
+WrongCat::WrongCat() : WrongAnimal() {
+	std::cout << "WrongCat default constructor called" << std::endl;
+	this->type = "WrongCat";
+}
+
+WrongCat::WrongCat(WrongCat &copy) {
+	std::cout << "WrongCat copy constructor called" << std::endl;
+	*this = copy;
+}
+
+
 //destructor
-~WrongCat();
+WrongCat::~WrongCat(){
+	std::cout << "WrongCat destructor called" << std::endl;
+}
 
-
-private:
-
-
-};
-
-#endif

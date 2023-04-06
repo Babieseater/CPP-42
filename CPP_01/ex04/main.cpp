@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 14:58:42 by smayrand          #+#    #+#             */
-/*   Updated: 2023/01/31 16:20:06 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/04 13:18:48 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 	size_t			index;
 
 	if(argc != 4)
-		std::cout << "Require 4 arguments" << std::endl;
+		std::cout << "Require 3 arguments" << std::endl;
 	else
 	{
 		std::ifstream	in(argv[1]);

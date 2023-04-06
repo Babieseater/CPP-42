@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 15:10:54 by smayrand          #+#    #+#             */
-/*   Updated: 2023/03/28 15:15:50 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/04 13:10:39 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main(void) 
 {
-	std::string brain = "HI THIS IS BRIAN";
+	std::string brain = "HI THIS IS BRAIN";
 	std::string *stringPTR = &brain;
 	std::string &stringREF = brain;
 	

@@ -5,15 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/01/30 14:51:40 by smayrand          #+#    #+#              #
-#    Updated: 2023/04/04 13:19:28 by smayrand         ###   ########.fr        #
+#    Created: 2023/02/13 12:56:38 by smayrand          #+#    #+#              #
+#    Updated: 2023/04/04 14:12:44 by smayrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 GREEN = '\033[32m'
 NONE = '\033[0m'
 
-NAME = Sed
+NAME = Brain
 
 CC = clang++
 CFLAGS = -Wall -Werror -Wextra  -std=c++98
@@ -22,6 +23,11 @@ CFLAGS = -Wall -Werror -Wextra  -std=c++98
 RM = rm -f
 
 SRCS = main.cpp\
+Animal.cpp\
+Cat.cpp\
+Dog.cpp\
+Brain.cpp
+
 
 
 OBJS = $(SRCS:.cpp=.o)
@@ -37,7 +43,7 @@ clean:
 	@$(RM) $(OBJS)
 
 fclean: clean
-	@$(RM) $(NAME) resultat
+	@$(RM) $(NAME)
 	@echo $(GREEN) "FULLY	CLEANED" $(NONE)
 
 re: fclean all

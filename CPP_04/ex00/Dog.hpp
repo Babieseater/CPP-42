@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:07:37 by smayrand          #+#    #+#             */
-/*   Updated: 2023/03/13 14:20:09 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/03/29 15:29:47 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ class Dog : public Animal {
 public:
 //constructor
 Dog();
+Dog(Dog &copy);
 //destructor
 ~Dog();
-
+//function
+void	makeSound() const;
 
 private:
-
 
 };
 

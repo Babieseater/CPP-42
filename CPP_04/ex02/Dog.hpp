@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 14:01:42 by smayrand          #+#    #+#             */
-/*   Updated: 2023/03/28 13:36:28 by smayrand         ###   ########.fr       */
+/*   Created: 2023/03/13 14:07:37 by smayrand          #+#    #+#             */
+/*   Updated: 2023/04/05 15:47:53 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DOG_H
+#define DOG_H
+#include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
+class Dog : public Animal {
+public:
 //constructor
-Animal::Animal() {
-	std::cout << "Animal default constructor called" << std::endl;
-}
-//Destructor
-Animal::~Animal() {
-	std::cout << "Animal default destructor called" << std::endl;
-}
+	Dog();
+	Dog(const Dog &copy);
+//destructor
+	~Dog();
+//function
+	void	makeSound() const;
+	std::string		getIdea(int i);
 
-void	Animal::makeSound()
-{
-	std::cout << this->type << " : " << "generic animal sound" << std::endl;
-}
+	Dog &operator=(const Dog &right);
 
-const std::string	Animal::getType() const
-{
-	return this->type;
-}
+private:
+	Brain *_brain;
+
+};
+
+#endif
