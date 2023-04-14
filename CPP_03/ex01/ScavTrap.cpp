@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:04:15 by smayrand          #+#    #+#             */
-/*   Updated: 2023/02/14 14:56:05 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:59:54 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 #include "ClapTrap.hpp"
 
 //Constructor
+ScavTrap::ScavTrap() {
+	
+}
+ScavTrap::ScavTrap(ScavTrap &copy) {
+	std::cout << "Animal copy constructor called" << std::endl;
+	*this = copy;
+}
+
 ScavTrap::ScavTrap(std::string name) : ClapTrap() {
 	Name = name;
 	Hitpoints = 100;
@@ -22,6 +30,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap() {
 	std::cout << "ScavTrap " << Name << " has been built!" << std::endl;
 	return;
 }
+
 //Destructor
 ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap " << Name << " has been shredded to pieces!" << std::endl;
@@ -87,4 +96,13 @@ void	ScavTrap::guardGate(unsigned int amount) {
 		std::cout << "ScavTrap " << Name << " don't have enough energy to use Gatekeep!" << std::endl;
 		this->Hitpoints -= amount;
 	}
+}
+
+ScavTrap	&ScavTrap::operator=(const ScavTrap &right)
+{
+	if (this != &right)
+	{
+		Name = right.Name;
+	}
+	return *this;
 }

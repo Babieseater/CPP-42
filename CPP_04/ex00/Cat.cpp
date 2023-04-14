@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:08:18 by smayrand          #+#    #+#             */
-/*   Updated: 2023/03/29 15:27:38 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 14:04:29 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,14 @@ Cat::~Cat(){
 void	Cat::makeSound() const
 {
 	std::cout << "A cat sound like : Meow Meow Motherfucker " << std::endl;
+}
+
+
+Cat	&Cat::operator=(const Cat &right)
+{
+	if (this != &right)
+	{
+		type = right.type;
+	}
+	return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:07:19 by smayrand          #+#    #+#             */
-/*   Updated: 2023/03/29 15:29:29 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 14:04:48 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,14 @@ Dog::~Dog(){
 void	Dog::makeSound() const
 {
 	std::cout << "A dog sound like : Woof I guess" << std::endl;
+}
+
+
+Dog	&Dog::operator=(const Dog &right)
+{
+	if (this != &right)
+	{
+		type = right.type;
+	}
+	return *this;
 }

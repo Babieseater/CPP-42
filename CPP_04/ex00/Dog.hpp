@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:07:37 by smayrand          #+#    #+#             */
-/*   Updated: 2023/03/29 15:29:47 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 14:06:20 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ Dog(Dog &copy);
 ~Dog();
 //function
 void	makeSound() const;
+
+Dog &operator=(const Dog &right);
 
 private:
 

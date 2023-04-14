@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:08:52 by smayrand          #+#    #+#             */
-/*   Updated: 2023/03/29 15:31:30 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 14:05:44 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ WrongCat();
 WrongCat(WrongCat &copy);
 //destructor
 ~WrongCat();
+
+WrongCat &operator=(const WrongCat &right);
 
 private:
 

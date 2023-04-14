@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 13:07:38 by smayrand          #+#    #+#             */
-/*   Updated: 2023/02/14 13:12:03 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:51:21 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ void	attack(const std::string& target);
 void	takeDamage(unsigned int amount);
 void	beRepaired(unsigned int amount);
 
+//overload
+ClapTrap &operator=(const ClapTrap &right);
+
 private:
 //attribute
 std::string Name;
@@ -34,6 +37,8 @@ int Energy;
 int AtkDmg;
 int EValue;
 
+ClapTrap();
+ClapTrap(ClapTrap &copy);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 13:07:38 by smayrand          #+#    #+#             */
-/*   Updated: 2023/02/14 14:49:51 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:53:10 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 class ClapTrap {
 public:
 //Constructor
-ClapTrap();
 ClapTrap(std::string name);
 //Destructor
 ~ClapTrap();
@@ -26,6 +25,9 @@ ClapTrap(std::string name);
 void	attack(const std::string& target);
 void	takeDamage(unsigned int amount);
 void	beRepaired(unsigned int amount);
+
+//overload
+ClapTrap &operator=(const ClapTrap &right);
 
 protected:
 //attribute
@@ -36,6 +38,9 @@ int AtkDmg;
 int Shield;
 int EValue;
 int HFValue;
+
+ClapTrap();
+ClapTrap(ClapTrap &copy);
 };
 
 #endif

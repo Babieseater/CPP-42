@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 13:07:53 by smayrand          #+#    #+#             */
-/*   Updated: 2023/02/14 14:49:33 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:54:56 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,18 @@
 ClapTrap::ClapTrap() {
 	
 }
+
 ClapTrap::ClapTrap(std::string name) {
 	Name = name;
 	Hitpoints = 10;
 	Energy = 10;
 	AtkDmg = 0;
 	std::cout << "ClapTrap " << Name << " has been constructed!" << std::endl;
+}
+
+ClapTrap::ClapTrap(ClapTrap &copy) {
+	std::cout << "Animal copy constructor called" << std::endl;
+	*this = copy;
 }
 //Destructor
 ClapTrap::~ClapTrap() {
@@ -71,4 +77,14 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 		std::cout << "ClapTrap " << Name << " don't have enough energy to repair itself!" << std::endl;
 	else
 		std::cout << "ClapTrap " << Name << " is dead!" << std::endl;
+}
+
+//overload
+ClapTrap	&ClapTrap::operator=(const ClapTrap &right)
+{
+	if (this != &right)
+	{
+		Name = right.Name;
+	}
+	return *this;
 }

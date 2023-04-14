@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:08:27 by smayrand          #+#    #+#             */
-/*   Updated: 2023/03/29 15:28:29 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 14:06:07 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Cat : public Animal {
 		~Cat();
 	//function
 	void makeSound() const;
+	
+	Cat &operator=(const Cat &right);
 	
 	private:
 
