@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 23:29:17 by smayrand          #+#    #+#             */
-/*   Updated: 2023/04/17 13:15:10 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/05/09 14:24:13 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ class	Bureaucrat;
 
 #include <iostream>
 #include <exception>
+#include <fstream>
 #include "Bureaucrat.hpp"
+
 class Form {
 private:
-	Form();
 	Form(Form& copy);
 	//attribute
 		std::string const _name;
@@ -30,35 +31,49 @@ private:
 		
 public:
 //constructor
-	Form(std::string const & name, int grade);
+	Form();
+	Form(std::string const & name, int grade, int exec);
 //destructor
 	~Form();
 	
 //getters
 	std::string const getName() const;
 	int getGrade() const;
+	int getExec() const;
 	bool getSigned() const;
 	
 //functions
-	void beSigned(class Bureaucrat const &bureaucrat);
+	virtual void beSigned(class Bureaucrat const &bureaucrat);
+	virtual void exec(Bureaucrat const & bureaucrat) const = 0;
 	
 //overload
 	Form &operator=(const Form &rhs);
 
 //exceptions
-	class GradeTooHighException : public std::exception
+	class Exception : public std::exception
 	{
 		public:
-		const char* Too_High() const throw() {
-			return ("Form's grade too high but created nontheless because why not?");
-		}
+		virtual const char* what() const throw();
 	};
-	class GradeTooLowException : public std::exception
+	class GradeTooHighException : public Form::Exception
 	{
 		public:
-		const char* Too_Low() const throw() {
-			return ("Form's grade too low but created nontheless because why not?");
-		}
+		virtual const char* what() const throw();
+	};
+	class GradeTooLowException : public Form::Exception
+	{
+		public:
+		virtual const char* what() const throw();
+	};
+	class SignedException : public Form::Exception
+	{
+		public:
+		virtual const char* what() const throw();
+	};
+	class UnsignedFormException : public Form::Exception
+	{
+		public:
+		virtual const char* what() const throw();
 	};
 
 };

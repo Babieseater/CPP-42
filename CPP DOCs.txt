@@ -6,3 +6,9 @@ https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-st
 
 Const :
 https://learn.microsoft.com/en-us/cpp/cpp/const-cpp?view=msvc-170
+
+Rand:
+https://cplusplus.com/reference/cstdlib/rand/
+
+Dynamic Cast:
+https://en.cppreference.com/w/cpp/language/dynamic_cast

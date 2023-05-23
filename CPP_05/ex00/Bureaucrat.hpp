@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 13:19:35 by smayrand          #+#    #+#             */
-/*   Updated: 2023/04/11 22:22:28 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 14:15:29 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 
 class Bureaucrat {
 private:
+	Bureaucrat();
+	Bureaucrat(Bureaucrat& copy);
 //attributes
 	std::string const _name;
 	int			_grade;
 public:
 //constructors/destructors
-	Bureaucrat();
 	Bureaucrat(std::string const & name, int grade);
-	Bureaucrat(Bureaucrat& copy);
 	~Bureaucrat();
 //getters
 	std::string	const getName() const;

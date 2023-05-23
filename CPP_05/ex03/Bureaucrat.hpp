@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 13:19:35 by smayrand          #+#    #+#             */
-/*   Updated: 2023/04/17 13:14:58 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/05/09 13:03:19 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,38 +41,18 @@ public:
 	
 //functions
 	void signForm(class Form &form);
+	void execForm(class Form const &form);
 	
 //exceptions
 	class GradeTooHighException : public std::exception
 	{
 		public:
-		const char* Too_High() const throw() {
-			return ("Grade cannot go higher");
-		}
+		const char* what() const throw();
 	};
 	class GradeTooLowException : public std::exception
 	{
 		public:
-		const char* Too_Low() const throw() {
-			return ("Grade cannot go lower");
-		}
-		
-	};
-	class GradeTooLowSignException : public std::exception
-	{
-		public:
-		const char* Too_LowS() const throw() {
-			return ("Grade too low to sign");
-		}
-		
-	};
-	class AlreadySignedException : public std::exception
-	{
-		public:
-		const char* Already_Signed() const throw() {
-			return ("the form is already signed, that's why he hate working here.");
-		}
-		
+		const char* what() const throw();
 	};
 
 //copy overload
