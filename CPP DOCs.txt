@@ -12,3 +12,9 @@ https://cplusplus.com/reference/cstdlib/rand/
 
 Dynamic Cast:
 https://en.cppreference.com/w/cpp/language/dynamic_cast
+
+Template function:
+https://www.geeksforgeeks.org/swapping-two-numbers-using-template-function-in-c/
+
+Class Template:
+https://www.programiz.com/cpp-programming/class-templates
