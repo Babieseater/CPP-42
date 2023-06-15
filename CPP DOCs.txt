@@ -18,3 +18,10 @@ https://www.geeksforgeeks.org/swapping-two-numbers-using-template-function-in-c/
 
 Class Template:
 https://www.programiz.com/cpp-programming/class-templates
+
+CPP08 Container Iterator / deque / list / stack:
+https://en.cppreference.com/w/cpp/container/deque/begin
+https://en.cppreference.com/w/cpp/container/deque
+https://en.cppreference.com/w/cpp/container/list
+https://en.cppreference.com/w/cpp/container/stack
+https://bigpel66.oopy.io/library/42/inner-circle/19 // Google translate
