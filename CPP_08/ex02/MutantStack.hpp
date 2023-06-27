@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 20:17:12 by smayrand          #+#    #+#             */
-/*   Updated: 2023/06/15 15:03:36 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/06/20 11:38:27 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <stack>
-#include <deque>
 
 template<typename T>
 class MutantStack : public std::stack<T> {

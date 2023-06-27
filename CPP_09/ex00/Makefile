@@ -6,14 +6,14 @@
 #    By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/16 14:34:04 by smayrand          #+#    #+#              #
-#    Updated: 2023/06/20 12:36:41 by smayrand         ###   ########.fr        #
+#    Updated: 2023/06/26 13:45:13 by smayrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 GREEN = '\033[32m'
 NONE = '\033[0m'
 
-NAME = MutantStack
+NAME = btc
 
 CC = clang++
 CFLAGS = -Wall -Werror -Wextra  -std=c++98
@@ -22,6 +22,7 @@ CFLAGS = -Wall -Werror -Wextra  -std=c++98
 RM = rm -f
 
 SRCS = main.cpp\
+BitcoinExchange.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
