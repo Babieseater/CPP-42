@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 15:40:01 by smayrand          #+#    #+#             */
-/*   Updated: 2023/05/25 14:56:33 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/06/29 11:28:17 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class	Array {
 		delete []array;
 	}
 	
-	//funtion
+	//function
 	unsigned int size(void) const
 	{
 		return (_size);

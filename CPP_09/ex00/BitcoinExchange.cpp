@@ -6,13 +6,12 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 16:01:07 by smayrand          #+#    #+#             */
-/*   Updated: 2023/06/27 16:47:38 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/07/04 15:14:25 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
-
-//Constructor	
+	
 	BitcoinExchange::BitcoinExchange(const std::string &file) {
 		std::ifstream input(file.c_str());
 		std::string	  line;
@@ -41,24 +40,17 @@
 		}
 	}
 
-//Destructor
 	BitcoinExchange::~BitcoinExchange() {
 
 	}
 
-//Private Functions
 	bool BitcoinExchange::valiDate(std::string const &date) const
 	{
 		std::tm time = {};
 		std::stringstream data(date.c_str());
 		data >> std::get_time(&time, "%Y-%m-%d");
 		
-		if(time.tm_year == -1 || time.tm_mon == -1 || time.tm_mday == -1)
-		{
-			std::cout << "Error: Invalid Date." << std::endl;
-			return (0);
-		}
-		if(data.fail())
+		if(time.tm_year == -1 || time.tm_mon == -1 || time.tm_mday == -1 || data.fail())
 		{
 			std::cout << "Error: Invalid Date." << std::endl;
 			return (0);
@@ -81,7 +73,6 @@
 		return (1);
 	}
 
-//Public Function
 	void BitcoinExchange::start(const std::string &file)
 	{
 		double			value;
@@ -99,7 +90,7 @@
 				std::cout << "Error: Bad Input: " << line << std::endl;
 				continue;
 			}
-			if(!valiDate(date) || !valiValue(value))
+			if(!valiDate(date) || !valiValue(value) || del != '|')
 				continue;
 			double exchangeRate = exchangeRateGetter(date);
 			if(exchangeRate == -1.0)
@@ -111,7 +102,7 @@
 		}
 		
 	}
-//Getter	
+	
 	double BitcoinExchange::exchangeRateGetter(const std::string &date)
 	{
 		std::map<std::string, double>::iterator iterator; 

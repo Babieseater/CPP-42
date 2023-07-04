@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:53:21 by smayrand          #+#    #+#             */
-/*   Updated: 2023/05/23 13:15:08 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/06/29 12:07:52 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ MIN min(MIN arg1, MIN arg2) {
 	else if (arg1 > arg2)
 		return (arg2);
 	else
-		return (arg1);
+		return (arg2);
 }
 template <typename MAX>
 MAX max(MAX arg1, MAX arg2) {
@@ -41,7 +41,7 @@ MAX max(MAX arg1, MAX arg2) {
 	else if (arg1 < arg2)
 		return (arg2);
 	else
-		return (arg1);
+		return (arg2);
 }
 
 #endif

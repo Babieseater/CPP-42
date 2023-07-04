@@ -6,14 +6,14 @@
 #    By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/16 14:34:04 by smayrand          #+#    #+#              #
-#    Updated: 2023/06/20 12:36:35 by smayrand         ###   ########.fr        #
+#    Updated: 2023/07/04 12:14:33 by smayrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 GREEN = '\033[32m'
 NONE = '\033[0m'
 
-NAME = btc
+NAME = RPN
 
 CC = clang++
 CFLAGS = -Wall -Werror -Wextra  -std=c++98
