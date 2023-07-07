@@ -6,7 +6,7 @@
 /*   By: smayrand <smayrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:56:02 by smayrand          #+#    #+#             */
-/*   Updated: 2023/07/04 15:42:46 by smayrand         ###   ########.fr       */
+/*   Updated: 2023/07/04 19:40:30 by smayrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ int	main(int argc, char **argv)
 	{
 		while(argv[1][i] != '\0')
 		{
-			if ((i > 5 && isdigit(argv[1][i]) != 0 && isdigit(argv[1][i + 2]) != 0) || isdigit(argv[1][i]) != 0 && argv[1][i + 1] != ' '
-				|| (strchr("+-*/", argv[1][i]) != 0 && argv[1][i + 1] != ' ' && argv[1][i + 1] != '\0') || (argv[1][i] == ' ' && argv[1][i + 1] == '\0')
-					|| (strchr("+-/*", argv[1][i]) != 0 && strchr("+-/*", argv[1][i + 2]) != 0))
+			if ((i > 5 && isdigit(argv[1][i]) != 0 && isdigit(argv[1][i + 2]) != 0) 
+				|| isdigit(argv[1][i]) != 0 && argv[1][i + 1] != ' '
+					|| (strchr("+-*/", argv[1][i]) != 0 && argv[1][i + 1] != ' ' && argv[1][i + 1] != '\0') 
+						|| (argv[1][i] == ' ' && argv[1][i + 1] == '\0')
+							|| (strchr("+-/*", argv[1][i]) != 0 && strchr("+-/*", argv[1][i + 2]) != 0))
 				return (std::cout << "Error: Bad Format." << std::endl, 0);
 			if(isdigit(argv[1][i]) != 0 && argv[1][i + 1] != '\0')
 			{
@@ -50,6 +52,6 @@ int	main(int argc, char **argv)
 		std::cout << res << std::endl;
 	}
 	else
-		return (std::cout << "Error: Bad format." << std::endl, 0);
+		return (std::cout << "Error: Not enough or invalid arguments." << std::endl, 0);
 	return(0);
 }
